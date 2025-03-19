@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- chekbox: e uma caixa de multi seleção
+    radio:voce pode ter varias seleções mais com apenas uma seleção-->
+    <h1><strong>Selecione seu pedido de pizza:</strong></h1>
+    <form method="post"><!-- sempre que for enviar algo para o servidor e nescessario o metodo post-->
+     <p>quais sabores:</p>
+     <input type="checkbox" name="opcional[]" value=""><label>+queijo</label><br>
+     <input type="checkbox"name="opcional[]" value=""><label>+calabresa</label><br>
+     <input type="checkbox"name="opcional[]" value=""><label>+cebola</label><br>
+     <input type="checkbox"name="opcional[]" value=""><label>+azeitona</label><br>
+     <!--a ideia e que o check box seja uma variavel que tenha um ou mais valores,
+     essa variavel fica no atributo name="", entretanto so o nomes o mesmo, vai ocorrer
+     que o servidor recebe substituindo um pelo outro, para junta-los voce deve coloca
+     [] para a linguagem entender como uma lista-->
+
+     <p>Borda recheada ?</p>
+     <input type="radio" name="borda" value="sim"><label>sim</label><br>
+     <input type="radio" name="borda" value="nao"><label>nao</label><br>
+     <!-- quando for para enviar para um servidor , voce usa value  para criar um valor
+      na variavel borda, no caso voce tem duas opcoes da mesma variavel-->
+      <p>bebidas</p>
+      <input type="radio" name="bebidas" value="coca"><label>coca cola</label><br>
+      <input type="radio" name="bebidas" value="agua"><label>agua</label><br>
+      <input type="radio" name="bebidas" value="suco"><label>suco</label><br>
+      <input type="radio" name="bebidas" value="nenhum"><label>nenhum</label><br>
+      <!-- neste caso voce pode escolher um ou outro, significa que a variavel bebida
+       permanece a mesma, so o valor muda-->
+      <button type="submit">enviar</button>
+     
+    </form>
+</body>
+</html>
